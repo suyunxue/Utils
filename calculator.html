@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端rem计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<h1>rem</h1>
+输入<input class="input" name=""><br>
+输出<div class="output"></div>
+<button class="submit">提交</button>
+<h1>字体</h1>
+输入<input class="font-input" name=""><br>
+输出<div class="font-output"></div>
+<button class="font">提交</button>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('.input, .font-input').bind('keyup', function(event) {
+        if (event.keyCode == "13") {
+            $('.submit').click();
+            $('.font').click();
+        }
+    });
+
+    $('.submit').on('click', function (e) {
+        var input = $('.input').val();
+        var output = input / 3 / 100;
+        $('.output').html(output);
+    })
+
+    $('.font').on('click', function (e) {
+        var input = $('.font-input').val();
+        var output = input / 3;
+        $('.font-output').html(output);
+    })
+</script>
+</body>
+</html>
