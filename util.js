@@ -2,6 +2,45 @@
  * @file 工具函数
  */
 
+// 单位为毫秒
+function countDwonTime(restTime) {
+    hour = Math.floor(restTime / (1000 * 60 * 60));
+    minute = Math.floor((restTime % (1000 * 60 * 60)) / (1000 * 60));
+    second = Math.round((restTime % (1000 * 60)) / 1000);
+
+    let supplyTwo = function (num) {
+        num = num + '';
+        num = num.length < 2 ? ('0' + num) : num;
+        return num;
+    };
+
+    hour = supplyTwo(hour);
+    minute = supplyTwo(minute);
+    second = supplyTwo(second);
+}
+
+
+// 单位为秒
+function countDwonTime(restTime) {
+    hour = Math.floor(restTime / (60 * 60));
+    minute = Math.floor((restTime % (60 * 60)) / 60);
+    second = Math.round(restTime % 60);
+
+    let supplyTwo = function (num) {
+        num = num + '';
+        num = num.length < 2 ? ('0' + num) : num;
+        return num;
+    };
+
+    hour = supplyTwo(hour);
+    minute = supplyTwo(minute);
+    second = supplyTwo(second);
+
+    console.log('hour: ' + hour);
+    console.log('minute: ' + minute);
+    console.log('second: ' + second);
+}
+
 export const getCookie = (c_name) => {
     if(document.cookie.length > 0) {
         let c_start = document.cookie.indexOf(c_name + "=");//获取字符串的起点

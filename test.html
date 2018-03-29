@@ -16,7 +16,27 @@
 <body>
 	<div id="div"></div>
 	<script >
-		var div = document.getElementById('div');
+		function countDwonTime(restTime) {
+		    hour = Math.floor(restTime / (60 * 60));
+		    minute = Math.floor((restTime % (60 * 60)) / 60);
+		    second = Math.round(restTime % 60);
+
+		    let supplyTwo = function (num) {
+		        num = num + '';
+		        num = num.length < 2 ? ('0' + num) : num;
+		        return num;
+		    };
+
+		    hour = supplyTwo(hour);
+		    minute = supplyTwo(minute);
+		    second = supplyTwo(second);
+
+		    console.log('hour: ' + hour);
+		    console.log('minute: ' + minute);
+		    console.log('second: ' + second);
+		}
+
+		countDwonTime(64);
 	</script>
 </body>
 </html>
