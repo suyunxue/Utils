@@ -3,10 +3,10 @@
  */
 
 // 单位为毫秒
-function countDwonTime(restTime) {
-    hour = Math.floor(restTime / (1000 * 60 * 60));
-    minute = Math.floor((restTime % (1000 * 60 * 60)) / (1000 * 60));
-    second = Math.round((restTime % (1000 * 60)) / 1000);
+function timeToStr(time) {
+    hour = Math.floor(time / (1000 * 60 * 60));
+    minute = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+    second = Math.round((time % (1000 * 60)) / 1000);
 
     let supplyTwo = function (num) {
         num = num + '';
@@ -21,10 +21,10 @@ function countDwonTime(restTime) {
 
 
 // 单位为秒
-function countDwonTime(restTime) {
-    hour = Math.floor(restTime / (60 * 60));
-    minute = Math.floor((restTime % (60 * 60)) / 60);
-    second = Math.round(restTime % 60);
+function timeToStr(time) {
+    hour = Math.floor(time / (60 * 60));
+    minute = Math.floor((time % (60 * 60)) / 60);
+    second = Math.round(time % 60);
 
     let supplyTwo = function (num) {
         num = num + '';
