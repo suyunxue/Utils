@@ -2,6 +2,28 @@
  * @file 工具函数
  */
 
+// 图片压缩算法
+function compress(img, fileType) {
+    let canvas = document.createElement("canvas");
+    let ctx = canvas.getContext('2d');
+
+    let width = img.width;
+    let height = img.height;
+
+    canvas.width = width;
+    canvas.height = height;
+
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0, width, height);
+
+    // 压缩
+    let base64data = canvas.toDataURL(fileType, 0.75);
+    canvas = ctx = null;
+
+    return base64data;
+}
+
 // 单位为毫秒
 function timeToStr(time) {
     hour = Math.floor(time / (1000 * 60 * 60));
