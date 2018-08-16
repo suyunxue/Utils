@@ -99,41 +99,12 @@ div, span, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd {
      user-select: none;
 }
 
-.s-title {
-    font-size: 22px;
-    color: #000;
-}
-
-.s-sub-title {
-    font-size: 18px;
-    color: #000;
-}
-
-.s-desc {
-    font-size: 13px;
-    color: #999;
-}
-
-.s-container {
-    padding: 0 .17rem;
-}
-
-.s-list-item {
-    padding: .18rem 0;
-}
-
-.s-btn {
-    border: 1px solid #000;
-    background-color: #fff;
-}
-
 /*
  * 按行截断 & 行分割线样式
  * 1~5行截断，其中单行截断采用强制不换行方式实现
  * @ BUG
  * 多行截断box-orient:vertical;当超行截断时，末行line-height与box-height距离缺失
  * 目前给所有多行截断样式增加margin-bottom值补足行距，但会导致文字不足未发生截断时过多补足(目前无解)
- * @author yangfan
  */
 .c-line-clamp2, .c-line-clamp3, .c-line-clamp4, .c-line-clamp5 {
     display: -webkit-box;
