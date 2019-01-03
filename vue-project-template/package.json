@@ -1,15 +1,8 @@
 {
-  "name": "browser",
+  "name": "vue-project-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "browser-sync": "^2.11.1"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
