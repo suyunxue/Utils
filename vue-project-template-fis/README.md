@@ -24,3 +24,9 @@ npm run e2e
 # run all tests
 npm test
 ```
+
+发布自己npm包
+
+- npm login
+- npm whoami
+- npm publish 或者 npm publish@1.0.0
