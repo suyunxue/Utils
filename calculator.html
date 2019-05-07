@@ -20,10 +20,11 @@
 <button class="three">提交</button>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    $('.input, .font-input').bind('keyup', function(event) {
+    $('.input, .font-input, .three-input').bind('keyup', function(event) {
         if (event.keyCode == "13") {
             $('.submit').click();
             $('.font').click();
+            $('.three').click();
         }
     });
 
@@ -42,7 +43,7 @@
     $('.three').on('click', function (e) {
         var input = $('.three-input').val();
         var output = input / 3 * 2;
-        $('.font-output').html(output);
+        $('.two-output').html(output);
     })
 </script>
 </body>
