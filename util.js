@@ -41,7 +41,6 @@ function timeToStr(time) {
     second = supplyTwo(second);
 }
 
-
 // 单位为秒
 function timeToStr(time) {
     hour = Math.floor(time / (60 * 60));
@@ -63,7 +62,7 @@ function timeToStr(time) {
     console.log('second: ' + second);
 }
 
-export const getCookie = (c_name) => {
+const getCookie = (c_name) => {
     if(document.cookie.length > 0) {
         let c_start = document.cookie.indexOf(c_name + "=");//获取字符串的起点
         if(c_start != -1) {
@@ -77,7 +76,7 @@ export const getCookie = (c_name) => {
 }
 
 // 判断设备类型
-export const judgeDevice = () => {
+const judgeDevice = () => {
     let device = {};
     let ua = navigator.userAgent;
     let android = ua.match(/(Android);?[\s\/]+([\d.]+)?/);
@@ -103,7 +102,7 @@ export const judgeDevice = () => {
  * @param  {string} param hash路径和参数
  * @return {string} url
  */
-export const getOpenViewUrl = param => {
+const getOpenViewUrl = param => {
     let url = window.location.origin
         + window.location.pathname
         + '#/' + param;
@@ -118,7 +117,7 @@ export const getOpenViewUrl = param => {
  * @param {string} v2 目标版本号
  * @return {boolean} true 当前版本号大于等于目标版本
  */
-export const compareVersion = (v1, v2) => {
+const compareVersion = (v1, v2) => {
     v1 = v1 + '';
     v2 = v2 + '';
 
@@ -133,7 +132,7 @@ export const compareVersion = (v1, v2) => {
     return true;
 };
 
-export const debounce = (fun, delay) => {
+const debounce = (fun, delay) => {
     let last;
     return function (...args) {
         let ctx = this;
@@ -143,3 +142,13 @@ export const debounce = (fun, delay) => {
         }, delay);
     };
 };
+
+export {
+    debounce,
+    compareVersion,
+    getOpenViewUrl,
+    judgeDevice,
+    getCookie,
+    timeToStr,
+    compress
+}

@@ -1,4 +1,4 @@
-function produceRoundArrValue(arr) {
+function produceRandomArrValue(arr) {
     let length = arr.length;
     let index = Math.round(Math.random() * (length - 1));
     let ret = arr[index];
@@ -6,5 +6,5 @@ function produceRoundArrValue(arr) {
 }
 
 module.exports = {
-    produceRoundArrValue
+    produceRandomArrValue
 }
