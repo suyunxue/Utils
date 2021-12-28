@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    本金<input placeholder="请输入本金" id="input" />元<br /><br />
+    年化利率<input placeholder="请输入利率" id="rate" />%<br /><br />
+    月数<input placeholder="请输入月数" id="month" /><br /><br />
+    年数<input placeholder="请输入年数" id="years" /><br /><br />
+    <button id="calculator">计算结果</button><br /><br />
+    <div class="res" id="result"></div>
+    <script>
+        var calculatorBtn = document.getElementById("calculator");
+        calculatorBtn.addEventListener('click', function (e) {
+            var input = document.getElementById("input");
+            var rate = document.getElementById("rate");
+            var month = document.getElementById("month");
+            var years = document.getElementById("years");
+            if (month.value) {
+                var result = +input.value * +rate.value / 100 / 12 * month.value;
+                var resultDiv = document.getElementById("result");
+                resultDiv.innerText = result + '元';
+            }
+            if (years.value) {
+                var result = +input.value * +rate.value / 100 * years.value;
+                var resultDiv = document.getElementById("result");
+                resultDiv.innerText = result + '元';
+            }
+        });
+    </script>
+</body>
+
+</html>
